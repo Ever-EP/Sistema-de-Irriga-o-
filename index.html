@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Irrigação Automática</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-leaf"></i> Sistema de Irrigação</h1>
+        </header>
+
+        <main>
+            <div class="card">
+                <div class="configuracao">
+                    <h2>Configuração do Timer</h2>
+                    <div class="input-group">
+                        <input type="number" id="intervalo" min="1" value="2">
+                        <span>horas</span>
+                    </div>
+                    <div class="switch-container">
+                        <label class="switch">
+                            <input type="checkbox" id="ativar">
+                            <span class="slider round"></span>
+                        </label>
+                        <span id="status">Sistema Desativado</span>
+                    </div>
+                    <button id="salvar" class="btn-primary">
+                        <i class="fas fa-save"></i> Salvar Configuração
+                    </button>
+                </div>
+
+                <div class="status-panel">
+                    <h2>Status do Sistema</h2>
+                    <div class="status-info">
+                        <div class="info-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <span>Última Irrigação:</span>
+                                <span id="ultima-irrigacao">--:--</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-hourglass-half"></i>
+                            <div>
+                                <span>Próxima Irrigação:</span>
+                                <span id="proxima-irrigacao">--:--</span>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <i class="fas fa-tint"></i>
+                            <div>
+                                <span>Estado:</span>
+                                <span id="estado-atual">Inativo</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <div id="notification" class="notification"></div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html> 
